@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,41 +14,58 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="AR_Kiosk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
                             </arscnView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLJ-94-AOJ">
-                                <rect key="frame" x="400" y="726" width="566" height="128"/>
+                                <rect key="frame" x="815" y="0.0" width="209" height="373"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0b-wV-Xn9">
-                                        <rect key="frame" x="251" y="46.5" width="64" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0b-wV-Xn9">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="373"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="gogo"/>
+                                        <buttonConfiguration key="configuration" style="plain" subtitle="" cornerStyle="dynamic">
+                                            <imageReference key="image" image="arrowshape.right.fill" catalog="system" symbolScale="default" variableValue="1"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="93" scale="large" weight="semibold"/>
+                                            <attributedString key="attributedTitle"/>
+                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="cgI-Ly-ZMS"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출발!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5Q-nT-fLO">
+                                        <rect key="frame" x="82.5" y="173.5" width="44.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="u0b-wV-Xn9" firstAttribute="centerX" secondItem="oLJ-94-AOJ" secondAttribute="centerX" id="Hns-TB-bxN"/>
-                                    <constraint firstItem="u0b-wV-Xn9" firstAttribute="centerY" secondItem="oLJ-94-AOJ" secondAttribute="centerY" id="JXl-az-oqu"/>
+                                    <constraint firstItem="P5Q-nT-fLO" firstAttribute="centerY" secondItem="u0b-wV-Xn9" secondAttribute="centerY" id="1f8-Ho-gMf"/>
+                                    <constraint firstItem="u0b-wV-Xn9" firstAttribute="top" secondItem="oLJ-94-AOJ" secondAttribute="top" id="Fkm-Rx-j3P"/>
+                                    <constraint firstItem="P5Q-nT-fLO" firstAttribute="centerX" secondItem="u0b-wV-Xn9" secondAttribute="centerX" id="JLQ-11-gSJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="u0b-wV-Xn9" secondAttribute="trailing" id="Jhg-cQ-Iuk"/>
+                                    <constraint firstItem="u0b-wV-Xn9" firstAttribute="leading" secondItem="oLJ-94-AOJ" secondAttribute="leading" id="L2b-AL-FwL"/>
+                                    <constraint firstAttribute="height" constant="373" id="Xff-td-m2A"/>
+                                    <constraint firstAttribute="width" constant="209" id="qeG-qC-Rd0"/>
+                                    <constraint firstAttribute="bottom" secondItem="u0b-wV-Xn9" secondAttribute="bottom" id="rBS-b1-8vX"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="oLJ-94-AOJ" secondAttribute="bottom" constant="150" id="9k5-8j-HdC"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
-                            <constraint firstItem="oLJ-94-AOJ" firstAttribute="centerX" secondItem="fQZ-KI-GVf" secondAttribute="centerX" id="OYR-Ei-hiS"/>
-                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="oLJ-94-AOJ" secondAttribute="trailing" constant="400" id="OfT-Ga-gBw"/>
+                            <constraint firstItem="oLJ-94-AOJ" firstAttribute="trailing" secondItem="BrB-h1-WRS" secondAttribute="trailing" id="LeH-Gf-g58"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
-                            <constraint firstItem="oLJ-94-AOJ" firstAttribute="height" secondItem="fQZ-KI-GVf" secondAttribute="height" multiplier="0.13061" id="YBI-Cp-QZ5"/>
+                            <constraint firstItem="oLJ-94-AOJ" firstAttribute="top" secondItem="BrB-h1-WRS" secondAttribute="top" id="n4M-zp-iDp"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
                     </view>
@@ -58,15 +76,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-2"/>
+            <point key="canvasLocation" x="138.8671875" y="-2.1961932650073206"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
